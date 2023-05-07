@@ -15,21 +15,6 @@
   </style>
 </head>
 <body>
-
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
   
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -72,8 +57,45 @@
         <button><a href="">Register</a></button>
       </div>
       <div class="Navbar__Link Navbar__Link-toggle" >
-        <i class="fas fa-bars" onclick="openSidemenu()"></i>
+        <i class="fas fa-bars"></i>
       </div>
+    </div>
+  </div>
+  <div class="sidenavbar">
+    <div class="sidenavbar-links">
+      <p style="color: rgb(127, 126, 126); font-size: larger; " class="closebtn">X</p>
+      <ul class="sidenav-list">
+        <li class="dropdown">
+          <a href="#" class="sideHeaders">Features</a>
+          <ul class="dropdown-list">
+            <li><p><i class="fa fa-list-alt" aria-hidden="true"></i><span><a href="#">TodoList</a></span></p></li>
+            <li><p><i class="fa fa-calendar" aria-hidden="true"></i><span><a href="#">Calender</a></span></p></li>
+            <li><p><i class="fa fa-bell" aria-hidden="true"></i></i><span><a href="#">Reminders</a></span></p></li>
+            <li><p><i class="fa fa-clock-o" aria-hidden="true"></i><span><a href="#">Planning</a></span></p></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="sideHeaders">Company</a>
+          <ul class="dropdown-list">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="sideHeaders">Careers</a></li>
+        <li class="dropdown"><a href="#" class="sideHeaders">About</a></li>
+      </ul>
+     </div>
+     <div class="SideNavTwo">
+      <div class="Navbar__Link">
+      <a href="">Login</a>
+      </div>
+      <div class="Navbar__Link">
+        <button><a href="">Register</a></button>
+      </div>
+      <!-- <div class="Navbar__Link Navbar__Link-toggle" >
+        <i class="fas fa-bars" onclick="openSidemenu()"></i>
+      </div> -->
     </div>
   </div>
 <div class="mainPage">
@@ -124,5 +146,19 @@ xmlns="http://www.w3.org/2000/svg">
   
 
 </div>
+<script>
+  function showsidemenu(params) {
+   const sidemenu = document.querySelector('.sidenavbar')
+   sidemenu.classList.add('sidemenuToggle')
+ 
+  }
+  function closeSidebar(params) {
+    const closemenu = document.querySelector('.sidenavbar')
+   closemenu.classList.toggle('closemenu')
+   console.log('clicked');
+  }
+  document.querySelector('.Navbar__Link-toggle').addEventListener('click',showsidemenu)
+  document.querySelector('.closebtn').addEventListener('click',closeSidebar)
+</script>
 </body>
 </html>
